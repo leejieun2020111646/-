@@ -9,21 +9,20 @@ void oct_8(int get_num);
 void hex_16(int get_num);
 
 int main() {
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä: "); //Á¤¼ö¸¦ ÀÔ·Â¹Ş´Â´Ù
-	scanf_s("%d", &get_num);//¼ıÀÚ¸¦ ÀÔ·Â¹ŞÀ½
-	if (get_num >= 0) { //¾ç¼öÀÏ °æ¿ì
-		printf("2Áø¼ö: ");binary1(get_num); printf("\n");
-		printf("8Áø¼ö: ");oct_8(get_num);printf("\n");
-		printf("16Áø¼ö: ");hex_16(get_num);printf("\n");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”: "); //ì •ìˆ˜ë¥¼ ì…ë ¥ë°›ëŠ”ë‹¤
+	scanf_s("%d", &get_num);//ìˆ«ìë¥¼ ì…ë ¥ë°›ìŒ
+	if (get_num >= 0) { //ì–‘ìˆ˜ì¼ ê²½ìš°
+		printf("2ì§„ìˆ˜: ");binary1(get_num); printf("\n");
+		printf("8ì§„ìˆ˜: ");oct_8(get_num);printf("\n");
+		printf("16ì§„ìˆ˜: ");hex_16(get_num);printf("\n");
 	}
-	else { //À½¼öÀÏ °æ¿ì
-		printf("2Áø¼ö: "); binary2(get_num); printf("\n");
-		printf("16Áø¼ö: "); hex_16(get_num); printf("\n");
+	else { //ìŒìˆ˜ì¼ ê²½ìš°
+		printf("2ì§„ìˆ˜: "); binary2(get_num); printf("\n");
 	}
 	return 0;
 }
 
-void binary1(int get_num) { //¾ç¼ö-ÀÌÁø¼ö
+void binary1(int get_num) { //ì–‘ìˆ˜-ì´ì§„ìˆ˜
 	int k = 0;
 	while (get_num > 0) {
 		bin[k] = get_num % 2;
@@ -35,7 +34,7 @@ void binary1(int get_num) { //¾ç¼ö-ÀÌÁø¼ö
 	}
 }
 
-void binary2(int get_num) {//À½¼ö-ÀÌÁø¼ö
+void binary2(int get_num) {//ìŒìˆ˜-ì´ì§„ìˆ˜
 	int k = 0;
 	get_num++;
 	get_num *= -1;
@@ -49,7 +48,7 @@ void binary2(int get_num) {//À½¼ö-ÀÌÁø¼ö
 	}
 }
 
-void oct_8(int get_num) //8Áø¼ö Ãâ·Â
+void oct_8(int get_num) //8ì§„ìˆ˜ ì¶œë ¥
 {
 	int cnt = 0;
 	int k;
@@ -67,7 +66,7 @@ void oct_8(int get_num) //8Áø¼ö Ãâ·Â
 }
 
 
-void hex_16(int get_num) //16Áø¼ö Ãâ·Â
+void hex_16(int get_num) //16ì§„ìˆ˜ ì¶œë ¥
 {
 	int cnt = 0;
 	int k;
