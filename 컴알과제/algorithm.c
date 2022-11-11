@@ -16,9 +16,10 @@ int main() {
 		printf("8진수: ");oct_8(get_num);printf("\n");
 		printf("16진수: ");hex_16(get_num);printf("\n");
 	}
-	else //음수일 경우
-		printf("2진수: ");binary2(get_num); printf("\n");
-
+	else { //음수일 경우
+		printf("2진수: "); binary2(get_num); printf("\n");
+		printf("16진수: "); hex_16(get_num); printf("\n");
+	}
 	return 0;
 }
 
